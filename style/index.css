@@ -1,0 +1,86 @@
+@import url(footer.css);
+@import url(galery.css);
+@import url(mobile-nav.css);
+@import url(header.css);
+
+@font-face {
+    font-family: Lato;
+    src:url(/font/Lato-Black.ttf)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    max-width: 100vw;
+}
+
+main {
+    padding-top: 100px;
+}
+
+/* -------------TABLET---------------- */
+@media screen and (min-width: 600px){
+    main {
+        padding-top: 40px;
+    }
+}
+
+
+/* ----------------PC------------------ */
+@media screen and (min-width: 600px){
+    main {
+        padding-top: 40px;
+    }
+}
+
+h3 {
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 3px;
+    font-size: 12px;
+}
+
+.kep {
+    position: relative;
+}
+
+.kep p {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: .5rem .75rem;
+    z-index: 5;
+    bottom: 12px;
+    right: 12px;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%); */
+    opacity: 0;
+    transition: ease-in-out .35s;
+}
+
+.kep:hover p{
+    animation: slideOut ease-in-out .35s forwards;
+}
+
+@keyframes slideOut {
+    0%{
+        width: 0;
+        opacity: 0;
+    }
+    to{
+        width: 200px;
+        opacity: 1;
+    }
+}
+
+.szoveg {
+    color: red;
+    position: absolute;
+    bottom: 0;
+}

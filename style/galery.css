@@ -1,0 +1,74 @@
+#galeria {
+    display: grid;
+    width: 100%;
+    background-color: rgb(122, 122, 122);
+}
+
+img {
+    width: 100%;
+    filter:grayscale(1);
+    transition: ease-in-out .35s;
+}
+
+img:hover {
+    filter: grayscale(0);
+    /* margin: 12px; */
+    padding: 5px;
+
+}
+
+/* --------------TABLET------------------- */
+@media screen and (min-width: 600px){
+    #galeria {
+        height: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+/* -------------- PC ----------------------- */
+@media screen and (min-width: 1024px) {
+    #galeria {
+        grid-template-columns: unset;
+        grid-template-areas: 
+        "kep1 kep2 kep3"
+        "kep4 kep4 kep4"
+        "kep5 kep6 kep7"
+        "kep8 kep8 kep8";
+    }
+
+    img {
+        object-fit: cover;
+        height: 300px;
+    }
+
+    .kep1 {
+        grid-area: kep1;
+    }
+    .kep2 {
+        grid-area: kep2;
+    }
+    .kep3 {
+        grid-area: kep3;
+    }
+    .kep4 {
+        grid-area: kep4;
+    }
+    .kep5 {
+        grid-area: kep5;
+    }
+    .kep6 {
+        grid-area: kep6;
+    }
+    .kep7 {
+        grid-area: kep7;
+    }
+    .kep8 {
+        grid-area: kep8;
+    }
+    
+
+    
+}
